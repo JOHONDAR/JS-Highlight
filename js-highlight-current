@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		.highlight {
+  		background-color: yellow;
+		}
+		</style>
+	</head>
+<body>
+<!-- <button onclick="highlight('e')">Highlight</button> -->
+<label for="textbox0">Word One</label><br>
+<input type="text" id="textbox0" name="textbox0"><br>
+<button type="button" onclick="getInput0(textbox0,this)">Check</button><br><br>
+
+<label for="textbox1">Word Two</label><br>
+<input type="text" id="textbox1" name="textbox1"><br>
+<button type="button" onclick="getInput1(textbox1,this)">Check</button><br><br>
+
+<p id="entry0"></p><br>
+<p id="entry1"></p><br>
+<p id="error"></p>
+
+<script>
+	// Highlights any code in a given line.
+	function highlight(text,id,begin,end) {
+		
+	  	var inputText = document.getElementById(id);
+	  	var innerHTML = inputText.innerHTML;
+	  	var index = innerHTML.indexOf(text)+begin;
+	  	if (index >= 0) { 
+	   		innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+	   	inputText.innerHTML = innerHTML;
+	   	return string;
+	  	}
+	}
+	function verify(string,num,maxLen){
+		var begin=1;
+		var end=5;
+		var id="entry"+num;
+		// parameters to test for go here.
+        var len=string.length;
+  		if(len>maxLen)
+  		{
+  			document.getElementById(id).innerHTML = string;
+  			highlight(string,id,begin,end);  
+  		}
+  		else
+  		{
+  			document.getElementById(id).innerHTML = string;
+		}
+  	}
+  	function getInput0(button,el){
+  		
+  		var button = document.getElementsByTagName("INPUT")[0].getAttribute("name");
+  		var string = document.getElementById(button).value; 
+  		var num=0
+  		var maxLen=5
+  		verify(string,num,maxLen)
+  	}
+  	function getInput1(button,el){
+  		
+  		var button = document.getElementsByTagName("INPUT")[1].getAttribute("name");
+  		var string = document.getElementById(button).value; 
+  		var num=1
+  		var maxLen=100
+  		verify(string,num,maxLen)
+  	}
+
+</script>
+
+</body>
+</html> 
