@@ -5,11 +5,11 @@
 
 		<script>
 			function highlight() {
-			var begin=2;
-			var end=8;
-  			const input = document.getElementById('textbox');  
-  			input.focus();
-  			input.setSelectionRange(begin, end);
+				var begin=2;
+				var end=8;
+  				const input = document.getElementById('textbox');  
+  				input.focus();
+  				input.setSelectionRange(begin, end);
 			}
 		</script>
 	</body>
