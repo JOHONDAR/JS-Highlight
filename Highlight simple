@@ -1,15 +1,22 @@
 <html>
+	<head>
+		<style>
+			::selection {
+  			background-color: orange;
+			}
+		</style>
+	</head>
 	<body>
 		<input type="text" id="textbox" name="highlightWord"><br>
 		<button onclick="highlight()">Submit</button>
 
 		<script>
 			function highlight() {
-				var begin=2;
-				var end=8;
-  				const input = document.getElementById('textbox');  
-  				input.focus();
-  				input.setSelectionRange(begin, end);
+			var begin=2;
+			var end=8;
+  			const input = document.getElementById('textbox');  
+  			input.focus();
+  			input.setSelectionRange(begin, end);
 			}
 		</script>
 	</body>
