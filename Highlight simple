@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<style>
-			::selection {
+			input::selection {
   			background-color: orange;
 			}
 		</style>
